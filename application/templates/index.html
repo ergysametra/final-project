@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %} 
+
+{% for game in all_games %}
+
+<p>
+    Games ID: {{ game.id }}<br>
+    Games Description: {{ games.description }}<br>
+    {% if games.complete == True %}
+    Completed!
+    {% else %}
+    Incomplete
+    {% endif %}
+</p>
+{% endfor %}
+
+{%endblock body %} 
